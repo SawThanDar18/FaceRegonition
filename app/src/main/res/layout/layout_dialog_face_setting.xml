@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:text="Face Setting"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="50dp"
+            android:clickable="true"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/create_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Create Group"
+            android:textSize="14dp"
+            android:padding="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CFCDCD" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/register_import_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Register Face(Import Photo)"
+            android:textSize="14dp"
+            android:padding="16dp" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CFCDCD" />
+
+        <TextView
+            android:id="@+id/register_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Register Face(Take Photo)"
+            android:textSize="14dp"
+            android:padding="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CFCDCD" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
