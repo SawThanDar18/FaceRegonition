@@ -38,7 +38,12 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.arr'])
+    implementation files('C:\\juicy\\projects\\Complete SDK\\facepass SDK and DOC\\TestFacePass\\release\\20230306_V3.14.1\\Meg-A-FacePass-06-99-V3.14.1\\SDK\\libs\\FacePassAndroidSDK-year-release.aar')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation('org.apache.httpcomponents:httpmime:4.5.6') {
+        exclude module: "httpclient"
+    }
 }
