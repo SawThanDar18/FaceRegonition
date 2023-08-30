@@ -22,23 +22,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FaceRegonition"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".SplashActivity"
+            android:label="facepass"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            >
+        </activity>
 
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+        <activity android:name=".SettingActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            >
         </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="megvii.testfacepass.fileprovider"
+            android:authorities="com.sawthandar.faceregonition.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

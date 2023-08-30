@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.sawthandar.faceregonition'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.sawthandar.faceregonition"
@@ -16,12 +16,22 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    packagingOptions {
+        exclude 'META-INF/*'
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    packagingOptions {
+        pickFirst "**/libfacepass.so"
+        pickFirst "**/libfplicense.so"
+        doNotStrip "**/libfacepass.so"
+        doNotStrip "**/libfplicense.so"
+        pickFirst '**/libmcvsearch.so'
+        pickFirst '**/libmcvface-new.so'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -46,4 +56,6 @@ dependencies {
     implementation('org.apache.httpcomponents:httpmime:4.5.6') {
         exclude module: "httpclient"
     }
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.15'
 }
